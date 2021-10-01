@@ -43,7 +43,7 @@ def print_structure(path_name : str) :
                 departments[row['Департамент']] = departments.get( row['Департамент'], set([row['Отдел']]) )
                 departments[row['Департамент']].add(row['Отдел'])
             for key,value in departments.items(): 
-                print(key, ':', ', '.join([v for v in value])) 
+                print(key, ':', ', '.join(value)) 
                 
     except FileNotFoundError:
         print(f'no file in directory:{path_name}')
